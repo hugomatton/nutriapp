@@ -18,7 +18,7 @@ export class ListePatientsComponent implements OnInit{
             .getPatients()
             .subscribe((res)=>{
                           this.patients = res
-                          console.log(res)
+                          console.log(res[1])
                         })
   }
 
