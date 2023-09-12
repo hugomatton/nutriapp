@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Route, RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { PatientsComponent } from './vues/patients/patients.component';
+import { InfoPatientsComponent } from './vues/patients/info-patients/info-patients.component';
+import { ConnexionUserComponent } from './vues/authentification/connexion-user/connexion-user.component';
 
-const routes: Routes = [];
+const routes: Route[] = [
+  { path: '', component: ConnexionUserComponent },
+  { path: 'patients', component: PatientsComponent },
+  { path: 'patients/:id', component: InfoPatientsComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

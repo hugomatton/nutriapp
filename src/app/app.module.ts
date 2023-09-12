@@ -8,6 +8,8 @@ import { ConsultationComponent } from './vues/agenda/consultation/consultation.c
 import { ListePatientsComponent } from './vues/patients/liste-patients/liste-patients.component';
 import { InfoPatientsComponent } from './vues/patients/info-patients/info-patients.component';
 import { ConnexionUserComponent } from './vues/authentification/connexion-user/connexion-user.component';
+import { PatientsComponent } from './vues/patients/patients.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,12 @@ import { ConnexionUserComponent } from './vues/authentification/connexion-user/c
     ConsultationComponent,
     ListePatientsComponent,
     InfoPatientsComponent,
-    ConnexionUserComponent
+    ConnexionUserComponent,
+    PatientsComponent,
+    HeaderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
