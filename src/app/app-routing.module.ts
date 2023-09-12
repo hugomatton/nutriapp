@@ -3,11 +3,11 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PatientsComponent } from './vues/patients/patients.component';
 import { InfoPatientsComponent } from './vues/patients/info-patients/info-patients.component';
-import { AgendaComponent } from './vues/agenda/agenda.component';
+import { HistoriqueComponent } from './vues/historique/historique.component';
 
 const routes: Route[] = [
   { path: 'patients', component: PatientsComponent },
-  { path: 'agenda', component: AgendaComponent },
+  { path: 'historique', component: HistoriqueComponent },
 ];
 
 @NgModule({

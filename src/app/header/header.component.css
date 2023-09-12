@@ -1,0 +1,29 @@
+/* navbar-vertical.css */
+.navbar-vertical {
+    width: 200px;
+    /* Largeur de la barre de navigation */
+    background-color: #333;
+    /* Couleur de fond */
+    color: #fff;
+    /* Couleur du texte */
+    padding: 20px;
+    /* Espacement intérieur */
+}
+
+.navbar-vertical ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-vertical li {
+    margin-bottom: 10px;
+}
+
+.navbar-vertical a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-vertical a:hover {
+    text-decoration: underline;
+}
