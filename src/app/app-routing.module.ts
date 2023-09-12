@@ -4,11 +4,12 @@ import { AppComponent } from './app.component';
 import { PatientsComponent } from './vues/patients/patients.component';
 import { InfoPatientsComponent } from './vues/patients/info-patients/info-patients.component';
 import { ConnexionUserComponent } from './vues/authentification/connexion-user/connexion-user.component';
+import { AgendaComponent } from './vues/agenda/agenda.component';
 
 const routes: Route[] = [
   { path: '', component: ConnexionUserComponent },
   { path: 'patients', component: PatientsComponent },
-  { path: 'patients/:id', component: InfoPatientsComponent },
+  { path: 'agenda', component: AgendaComponent },
 ];
 
 @NgModule({

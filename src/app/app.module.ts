@@ -10,6 +10,7 @@ import { InfoPatientsComponent } from './vues/patients/info-patients/info-patien
 import { ConnexionUserComponent } from './vues/authentification/connexion-user/connexion-user.component';
 import { PatientsComponent } from './vues/patients/patients.component';
 import { HeaderComponent } from './header/header.component';
+import { AgendaComponent } from './vues/agenda/agenda.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { HeaderComponent } from './header/header.component';
     ConnexionUserComponent,
     PatientsComponent,
     HeaderComponent,
+    AgendaComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
