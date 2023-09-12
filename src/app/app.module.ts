@@ -7,7 +7,6 @@ import { PopupPlanificationComponent } from './vues/agenda/popup-planification/p
 import { ConsultationComponent } from './vues/agenda/consultation/consultation.component';
 import { ListePatientsComponent } from './vues/patients/liste-patients/liste-patients.component';
 import { InfoPatientsComponent } from './vues/patients/info-patients/info-patients.component';
-import { ConnexionUserComponent } from './vues/authentification/connexion-user/connexion-user.component';
 import { PatientsComponent } from './vues/patients/patients.component';
 import { HeaderComponent } from './header/header.component';
 import { AgendaComponent } from './vues/agenda/agenda.component';
@@ -19,10 +18,9 @@ import { AgendaComponent } from './vues/agenda/agenda.component';
     ConsultationComponent,
     ListePatientsComponent,
     InfoPatientsComponent,
-    ConnexionUserComponent,
     PatientsComponent,
     HeaderComponent,
-    AgendaComponent,
+    AgendaComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
