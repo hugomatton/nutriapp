@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListePatientsComponent } from './vues/patients/liste-patients/liste-patients.component';
 import { InfoPatientsComponent } from './vues/patients/info-patients/info-patients.component';
-import { ConnexionUserComponent } from './vues/authentification/connexion-user/connexion-user.component';
 import { PatientsComponent } from './vues/patients/patients.component';
 import { HeaderComponent } from './header/header.component';
 import { HistoriqueComponent } from './vues/historique/historique.component';
@@ -20,7 +19,6 @@ import { TabMenuModule } from 'primeng/tabmenu';
     AppComponent,
     ListePatientsComponent,
     InfoPatientsComponent,
-    ConnexionUserComponent,
     PatientsComponent,
     HeaderComponent,
     HistoriqueComponent,
