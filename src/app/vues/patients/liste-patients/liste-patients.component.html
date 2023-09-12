@@ -1,1 +1,3 @@
-<p>liste-patients works!</p>
+<div *ngFor="let patient of patients">
+    <p *ngIf="patient.name" (click)="onSelectPatient(patient)">{{ patient.name[0].family + ' ' + patient.name[0].given[0] }}</p>
+</div>

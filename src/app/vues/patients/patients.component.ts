@@ -5,4 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './patients.component.html',
   styleUrls: ['./patients.component.css'],
 })
-export class PatientsComponent {}
+export class PatientsComponent {
+
+  patient : any
+
+  onSelectPatient( patient : any){
+    this.patient = patient
+  }
+
+}
