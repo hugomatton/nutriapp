@@ -1,0 +1,8 @@
+.container-patients{
+    display: flex;
+    flex-direction: row;
+}
+
+.liste-patients{
+    width: 20%;
+}

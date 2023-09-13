@@ -1,2 +1,4 @@
-<app-liste-patients (selectPatient)="onSelectPatient($event)"></app-liste-patients>
-<app-info-patients [patient]="patient"></app-info-patients>
+<div class="container-patients">
+    <app-liste-patients (selectPatient)="onSelectPatient($event)" class="liste-patients"></app-liste-patients>
+    <router-outlet></router-outlet>
+</div>

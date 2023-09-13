@@ -6,7 +6,11 @@ import { InfoPatientsComponent } from './vues/patients/info-patients/info-patien
 import { HistoriqueComponent } from './vues/historique/historique.component';
 
 const routes: Route[] = [
-  { path: 'patients', component: PatientsComponent },
+  {
+    path: 'patients',
+    component: PatientsComponent,
+    children: [{ path: ':id', component: InfoPatientsComponent }],
+  },
   { path: 'historique', component: HistoriqueComponent },
 ];
 

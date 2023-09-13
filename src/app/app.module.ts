@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MenubarModule } from 'primeng/menubar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { CardModule } from 'primeng/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HistoriqueComponent } from './vues/historique/historique.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabMenuModule } from 'primeng/tabmenu';
+import { ListboxModule } from 'primeng/listbox';
+import { CasePatientComponent } from './vues/patients/case-patient/case-patient.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { TabMenuModule } from 'primeng/tabmenu';
     PatientsComponent,
     HeaderComponent,
     HistoriqueComponent,
+    CasePatientComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import { TabMenuModule } from 'primeng/tabmenu';
     BrowserAnimationsModule,
     MatListModule,
     TabMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    ListboxModule,
+    CardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

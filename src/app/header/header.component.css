@@ -1,29 +1,8 @@
-/* navbar-vertical.css */
-.navbar-vertical {
-    width: 200px;
-    /* Largeur de la barre de navigation */
-    background-color: #333;
-    /* Couleur de fond */
-    color: #fff;
-    /* Couleur du texte */
-    padding: 20px;
-    /* Espacement intérieur */
+.logo{
+    margin-right: 50px;
 }
 
-.navbar-vertical ul {
-    list-style: none;
-    padding: 0;
-}
-
-.navbar-vertical li {
-    margin-bottom: 10px;
-}
-
-.navbar-vertical a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.navbar-vertical a:hover {
-    text-decoration: underline;
+/*Menubar*/
+::ng-deep .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link:not(.p-disabled):hover {
+    background-color: red;
 }

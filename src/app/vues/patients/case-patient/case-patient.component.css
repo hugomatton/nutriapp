@@ -1,0 +1,43 @@
+/* Styles de base pour la case */
+.case-patient {
+    width: 100%;
+    height: 100px;
+    
+    /* Couleur de fond de base */
+    transition: background-color 0.3s ease;
+    /* Bordure */
+    border-radius: 0px;
+    /* Coins arrondis */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    /* Couleur du texte */
+}
+
+/* Styles pour la case au survol */
+.case-patient:hover {
+    background-color: #bbd89e;
+    /* Couleur de fond au survol */
+    transform: scale(1.05);
+    /* Zoom léger au survol */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Ombre au survol */
+    cursor: pointer;
+    /* Curseur de type main au survol */
+}
+
+.patient-selected {
+    background-color: #bbd89e;
+}
+
+.case-patient:active {
+    background-color: #bbd89e;
+    /* Couleur de fond au survol */
+    transform: scale(1.05);
+    /* Zoom léger au survol */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Ombre au survol */
+    cursor: pointer;
+    /* Curseur de type main au survol */
+}

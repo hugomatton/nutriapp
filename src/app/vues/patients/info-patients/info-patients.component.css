@@ -1,0 +1,11 @@
+.test{
+    border: 1px solid red;
+    width: 300px;
+}
+
+.carte-infos-patient{
+    margin: 20%;
+    background-color: green;
+    border-radius: 10px;
+    width: 530%;
+}

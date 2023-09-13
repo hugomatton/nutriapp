@@ -3,15 +3,27 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PatientService {
-
-  constructor(private http: HttpClient) { }
+  idPatientSelected: string = '';
+  constructor(private http: HttpClient) {}
 
   getPatients(): Observable<any[]> {
     return this.http.get<any[]>('https://fhir.alliance4u.io/api/patient');
   }
 
+  getPatientById(idPatient: number): any {
+    return this.http.get<any[]>(
+      `https://fhir.alliance4u.io/api/patient/${idPatient}`
+    );
+  }
 
+  updatePatientSelected(newId: string) {
+    this.idPatientSelected = newId;
+  }
+
+  getPatientSelected(): string {
+    return this.idPatientSelected;
+  }
 }

@@ -1,0 +1,5 @@
+<div class="card flex justify-content-center case-patient" *ngIf="patient.name" 
+
+(click)="consulterFichePatient(patient.id)">
+    {{patient.name[0].family | uppercase}} {{patient.name[0].given[0]}}
+</div>
