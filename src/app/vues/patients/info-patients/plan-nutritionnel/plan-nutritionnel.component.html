@@ -1,4 +1,8 @@
-<form  #nutritionForm="ngForm" class="form-container">
-    <textarea rows="5" cols="100" pInputTextarea [autoResize]="true" name="instruction" [(ngModel)]="formValue.instruction" placeholder="Entrez votre instruction ici..."></textarea>
-    <p-button label="Envoyer" styleClass="p-button-secondary" class="button" (click)="onSubmit()"></p-button>
-</form>
+<div class="card">
+    <p-card header="Plan Nutritionnel">
+        <form #nutritionForm="ngForm" class="form-container">
+            <textarea rows="5" cols="100" pInputTextarea [autoResize]="true" name="instruction" [(ngModel)]="formValue.instruction" placeholder="Entrez votre instruction ici..."></textarea>
+            <p-button label="Envoyer" styleClass="p-button-secondary" class="button" (click)="onSubmit()"></p-button>
+        </form>
+    </p-card>
+</div>
