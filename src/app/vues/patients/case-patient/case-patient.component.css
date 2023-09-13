@@ -5,14 +5,14 @@
     
     /* Couleur de fond de base */
     transition: background-color 0.3s ease;
-    /* Bordure */
-    border-radius: 0px;
-    /* Coins arrondis */
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 15px;
     /* Couleur du texte */
+
+    border-bottom: #083b32 1px solid;
+
 }
 
 /* Styles pour la case au survol */

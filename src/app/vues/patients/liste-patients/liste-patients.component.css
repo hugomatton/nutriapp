@@ -1,0 +1,7 @@
+.scrollable-list {
+    background-color: #f3f3f3;
+    max-height: 90vh;
+    /* Hauteur maximale souhaitée */
+    overflow-y: auto;
+    /* Activer la barre de défilement verticale lorsque nécessaire */
+}

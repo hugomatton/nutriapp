@@ -16,9 +16,42 @@ textarea {
     margin-top: 10px;
   }
 
+  .bouton-submit{
+    background: red;
+  }
+
   .card{
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+  }
+
+  .container-plan-nutritionnel{
+    margin-top: 8px;
+    border-radius: 10px;
+    height: inherit;
+    width: 100%;
+    background-color: #ebeee7;
+  
+    font-weight: 500;
+    font-size: x-large;
+    margin-bottom: 0.2em;
+  }
+
+  .label-plan-nutritionnel{
+    padding: 15px;
+    justify-content: center;
+    font-weight: 500;
+    font-size: x-large;
+  }
+
+  .formulaire-plan-nutritionnel{
+    margin-top: 0.7em;
+    display: flex;
+  }
+
+  .edit-plan-nutritionnel{
+    display: flex;
   }

@@ -1,8 +1,14 @@
-<div class="card">
-    <p-card header="Plan Nutritionnel">
-        <form #nutritionForm="ngForm" class="form-container">
-            <textarea rows="5" cols="100" pInputTextarea [autoResize]="true" name="instruction" [(ngModel)]="formValue.instruction" placeholder="Entrez votre instruction ici..."></textarea>
-            <p-button label="Envoyer" styleClass="p-button-secondary" class="button" (click)="onSubmit()"></p-button>
+<div class="card container-plan-nutritionnel">
+    <div class="label-plan-nutritionnel"> Plan Nutritionnel
+        <form #nutritionForm="ngForm" class="form-container formulaire-plan-nutritionnel">
+            <div class="edit-plan-nutritionnel">
+                <textarea rows="2" cols="150" pInputTextarea [autoResize]="true" name="instruction" [(ngModel)]="formValue.instruction"
+                    placeholder="Entrez votre plan nutritionnel ici..."></textarea>
+                <p-button label="Envoyer" class="button" [style]="{'background-color': 'rgb(8, 59, 50)', 'margin-left': '9px'}"
+                    (click)="onSubmit()"></p-button>
+            </div>
+            
         </form>
-    </p-card>
+    </div>
 </div>
+

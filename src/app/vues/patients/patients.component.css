@@ -1,6 +1,7 @@
 .container-patients{
     display: flex;
     flex-direction: row;
+    height: 97.5%;
 }
 
 .liste-patients{

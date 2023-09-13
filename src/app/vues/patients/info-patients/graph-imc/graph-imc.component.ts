@@ -35,20 +35,101 @@ export class GraphImcComponent implements OnInit {
 
           const listeIMC: number[] = res.map(
             (item: { taille: number; poids: number }) => {
-              const imc = item.poids / (item.taille/100) ** 2;
+              const imc = (item.poids / (item.taille / 100) ** 2).toFixed(1);
               return imc;
             }
           );
+
+          let insuffisancePonderaleSevere: number[] = [];
+          let insuffisancePonderale: number[] = [];
+          let poidsNormal: number[] = [];
+          let surpoids: number[] = [];
+          let obesite1: number[] = [];
+          let obesite2: number[] = [];
+          let obesite3: number[] = [];
+
+          for (let i = 0; i < listeIMC.length; i++) {
+            insuffisancePonderaleSevere.push(16.5);
+            insuffisancePonderale.push(18.5);
+            poidsNormal.push(25);
+            surpoids.push(30);
+            obesite1.push(35);
+            obesite2.push(40);
+            obesite3.push(60);
+          }
 
           this.data = {
             labels: listeDates,
             datasets: [
               {
-                label: 'IMC',
+                label: 'IMC Patient',
                 data: listeIMC,
                 fill: false,
                 borderColor: '#083B32',
                 tension: 0.2,
+              },
+              {
+                label: 'Insuffisance Pondérale Sévère',
+                data: insuffisancePonderaleSevere,
+                fill: true,
+                tension: 0.4,
+                borderColor: '#4a7ab0',
+                backgroundColor: '#4a7ab0',
+                pointRadius: 0,
+              },
+              {
+                label: 'Insuffisance Pondérale',
+                data: insuffisancePonderale,
+                fill: true,
+                tension: 0.4,
+                borderColor: '#48a5af',
+                backgroundColor: '#48a5af',
+                pointRadius: 0,
+              },
+              {
+                label: 'Poids Normal',
+                data: poidsNormal,
+                fill: true,
+                tension: 0.4,
+                borderColor: '#47b592',
+                backgroundColor: '#47b592',
+                pointRadius: 0,
+              },
+              {
+                label: 'Surpoids',
+                data: surpoids,
+                fill: true,
+                tension: 0.4,
+                borderColor: '#efc448',
+                backgroundColor: '#efc448',
+                pointRadius: 0,
+              },
+              {
+                label: 'Obésite de grade 1',
+                data: obesite1,
+                fill: true,
+                tension: 0.4,
+                borderColor: '#ef7268',
+                backgroundColor: '#ef7268',
+                pointRadius: 0,
+              },
+              {
+                label: 'Obésite de grade 2',
+                data: obesite2,
+                fill: true,
+                tension: 0.4,
+                borderColor: '#db594d',
+                backgroundColor: '#db594d',
+                pointRadius: 0,
+              },
+              {
+                label: 'Obésite de grade 3',
+                data: obesite3,
+                fill: true,
+                tension: 0.4,
+                borderColor: '#db594d',
+                backgroundColor: '#db594d',
+                pointRadius: 0,
               },
             ],
           };
@@ -66,7 +147,7 @@ export class GraphImcComponent implements OnInit {
 
     this.options = {
       maintainAspectRatio: false,
-      aspectRatio: 0.8,
+      aspectRatio: 0.9,
       plugins: {
         legend: {
           labels: {
