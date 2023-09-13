@@ -12,6 +12,5 @@ export class ObservationService {
   getObservationById(patientId:string): Observable<any[]> {
     return this.http.get<any[]>(`https://fhir.alliance4u.io/api/observation?subject.reference=Patient/${patientId}`);
   }
-
-
+  
 }
