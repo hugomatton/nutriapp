@@ -15,4 +15,10 @@ textarea {
   .button {
     margin-top: 10px;
   }
-  
+
+  .card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  }
