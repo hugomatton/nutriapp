@@ -10,6 +10,7 @@ export class ListePatientsComponent implements OnInit {
   patients: any[] = [];
   listePatientsNoms: any[] = [];
   idPatientSelected!: any;
+  activePatientId: number | null = null;
   @Output() selectPatient = new EventEmitter<any>();
 
   constructor(private patientService: PatientService) {}
@@ -22,8 +23,8 @@ export class ListePatientsComponent implements OnInit {
     });
   }
 
-  onSelectPatient(idPatient: any) {
-    this.idPatientSelected = idPatient;
-    console.log('test + ' + this.idPatientSelected);
+  setActivePatient(patientId: number) {
+    this.activePatientId = patientId;
+    console.log();
   }
 }

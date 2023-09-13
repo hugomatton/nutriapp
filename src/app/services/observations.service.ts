@@ -63,6 +63,5 @@ export class ObservationService {
   deleteObservationById(obsId:string): any {
     return this.http.delete(`https://fhir.alliance4u.io/api/observation/${obsId}`)
   }
-
-
+  
 }

@@ -4,8 +4,10 @@
 }
 
 .carte-infos-patient{
-    margin: 20%;
-    background-color: green;
+    margin: 5vh;
+    padding: 5vh;
+    background-color: #f3f3f3;
     border-radius: 10px;
-    width: 530%;
+    width: fit-content;
+    height: 90%;
 }

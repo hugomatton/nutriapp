@@ -1,12 +1,8 @@
 <div class="carte-infos-patient">
-    <div *ngIf="patient">
-        <p>Nom : {{ patient.name[0].family }} </p>
-        <p>Prénom : {{ patient.name[0].given[0] }}</p>
-        <p>Date de Naissance : {{ patient.birthDate }}</p>
-        <p>Sexe : {{ patient.gender }}</p>
-    </div>
+    <app-patient-details></app-patient-details>
+    <app-graph-imc></app-graph-imc>
+    <app-plan-nutritionnel></app-plan-nutritionnel>
 </div>
-<app-imc-patient></app-imc-patient>
 
 
 

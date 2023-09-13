@@ -9,15 +9,12 @@ import { PatientService } from 'src/app/services/patients.service';
 })
 export class CasePatientComponent {
   @Input() patient!: any;
+  @Input() isActive: boolean = false; // Par défaut, le composant n'est pas actif
 
-  constructor(private router: Router, private patientService: PatientService) {}
-
-  idPatientSelected: string = this.patientService.getPatientSelected();
+  constructor(private router: Router) {}
 
   consulterFichePatient(idPatient: string) {
     console.log('consulter fiche patient', idPatient);
     this.router.navigateByUrl(`patients/${idPatient}`);
-
-    this.patientService.updatePatientSelected(idPatient);
   }
 }

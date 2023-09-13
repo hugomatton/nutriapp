@@ -18,12 +18,4 @@ export class PatientService {
       `https://fhir.alliance4u.io/api/patient/${idPatient}`
     );
   }
-
-  updatePatientSelected(newId: string) {
-    this.idPatientSelected = newId;
-  }
-
-  getPatientSelected(): string {
-    return this.idPatientSelected;
-  }
 }
