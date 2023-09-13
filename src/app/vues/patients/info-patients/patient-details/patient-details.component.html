@@ -1,0 +1,6 @@
+<div *ngIf="patient">
+    <p>Nom : {{ patient.name[0].family }} </p>
+    <p>Prénom : {{ patient.name[0].given[0] }}</p>
+    <p>Date de Naissance : {{ patient.birthDate }}</p>
+    <p>Sexe : {{ patient.gender }}</p>
+</div>

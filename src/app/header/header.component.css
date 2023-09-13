@@ -1,8 +1,5 @@
 .logo{
     margin-right: 50px;
-}
-
-/*Menubar*/
-::ng-deep .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-link:not(.p-disabled):hover {
-    background-color: red;
+    margin-left: 10px;
+    margin-top: 5px;
 }

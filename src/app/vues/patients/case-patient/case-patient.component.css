@@ -27,17 +27,7 @@
     /* Curseur de type main au survol */
 }
 
-.patient-selected {
-    background-color: #bbd89e;
-}
-
-.case-patient:active {
-    background-color: #bbd89e;
-    /* Couleur de fond au survol */
-    transform: scale(1.05);
-    /* Zoom léger au survol */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    /* Ombre au survol */
-    cursor: pointer;
-    /* Curseur de type main au survol */
+.active-style {
+    background-color: #083b32;
+    color: #f3f3f3;
 }

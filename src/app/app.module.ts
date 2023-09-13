@@ -4,6 +4,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CardModule } from 'primeng/card';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { ListboxModule } from 'primeng/listbox';
 import { CasePatientComponent } from './vues/patients/case-patient/case-patient.component';
+import { PatientDetailsComponent } from './vues/patients/info-patients/patient-details/patient-details.component';
+import { PlanNutritionnelComponent } from './vues/patients/info-patients/plan-nutritionnel/plan-nutritionnel.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { CasePatientComponent } from './vues/patients/case-patient/case-patient.
     HeaderComponent,
     HistoriqueComponent,
     CasePatientComponent,
+    PatientDetailsComponent,
+    PlanNutritionnelComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { CasePatientComponent } from './vues/patients/case-patient/case-patient.
     HttpClientModule,
     ListboxModule,
     CardModule,
+    InputTextareaModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
