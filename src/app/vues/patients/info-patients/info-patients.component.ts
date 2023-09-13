@@ -14,7 +14,6 @@ export class InfoPatientsComponent implements OnInit {
     private route: ActivatedRoute,
     private patientService: PatientService
   ) {
-    console.log('construct info patient');
   }
 
   ngOnInit(): void {

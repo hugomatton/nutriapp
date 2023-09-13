@@ -8,6 +8,6 @@
     padding: 5vh;
     background-color: #f3f3f3;
     border-radius: 10px;
-    width: 160vh;
+    width: fit-content;
     height: 90%;
 }
