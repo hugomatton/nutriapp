@@ -5,6 +5,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CardModule } from 'primeng/card';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ChartModule } from 'primeng/chart';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { ListboxModule } from 'primeng/listbox';
 import { CasePatientComponent } from './vues/patients/case-patient/case-patient.component';
 import { PatientDetailsComponent } from './vues/patients/info-patients/patient-details/patient-details.component';
 import { PlanNutritionnelComponent } from './vues/patients/info-patients/plan-nutritionnel/plan-nutritionnel.component';
+import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph-imc.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { PlanNutritionnelComponent } from './vues/patients/info-patients/plan-nu
     CasePatientComponent,
     PatientDetailsComponent,
     PlanNutritionnelComponent,
+    GraphImcComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { PlanNutritionnelComponent } from './vues/patients/info-patients/plan-nu
     ListboxModule,
     CardModule,
     InputTextareaModule,
+    ChartModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

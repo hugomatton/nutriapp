@@ -1,13 +1,38 @@
-.test {
-    border: 1px solid red;
-    width: 300px;
+.libelle-fiche-patient{
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 0.8em;
 }
 
-.carte-infos-patient {
-    margin: 5vh;
-    padding: 5vh;
-    background-color: #f3f3f3;
+.infos-patient {
+    padding: 2%;
+    background-color: #bbd89e;
     border-radius: 10px;
-    width: 160vh;
+    width: 130vh;
     height: 90%;
+    display: flex;
+
+    font-size: medium;
+}
+
+.colonne-gauche-infos{
+    width: 50%;
+}
+
+.colonne-droite-infos {
+    width: 50%;
+}
+
+.patient-div{
+    display: flex;
+}
+
+.champ-patient{
+    width: 40%;
+    font-weight: bold;
+}
+
+.champ-patient-droite{
+    width: 20%;
+    font-weight: bold;
 }

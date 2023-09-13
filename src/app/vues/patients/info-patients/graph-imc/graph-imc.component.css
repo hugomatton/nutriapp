@@ -1,0 +1,25 @@
+.container-graph{
+    margin-top: 20px;
+    border-radius: 10px;
+    height: inherit;
+    width: 130vh;
+    background-color: #d9d9d9;
+
+    font-weight: 500;
+    font-size: x-large;
+    margin-bottom: 0.8em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.label-suivi-imc{
+    padding: 15px;
+    justify-content: center;
+}
+
+.graph{
+    width: 100%;
+}
