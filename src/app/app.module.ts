@@ -51,7 +51,7 @@ import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph
     CardModule,
     InputTextareaModule,
     FormsModule,
-    ButtonModule
+    ButtonModule,
     ChartModule,
   ],
   providers: [],
