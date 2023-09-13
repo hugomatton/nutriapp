@@ -5,6 +5,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CardModule } from 'primeng/card';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,6 +50,8 @@ import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph
     ListboxModule,
     CardModule,
     InputTextareaModule,
+    FormsModule,
+    ButtonModule,
     ChartModule,
   ],
   providers: [],

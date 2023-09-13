@@ -2,30 +2,35 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export interface NutriOrder {
+  resourceType: string;
+  status: string;
+  patient: {reference:string};
+  dateTime: Date;
+  orderer: {reference:string};
+  allergyIntolerance: {
+    reference: string;
+  }[];
+  oralDiet: {
+    type: [
+      {
+        coding: [
+          {
+            system: string;
+            code: string;
+            display: string;
+          }
+        ];
+      }
+    ];
+    instruction: string;
+  };
+}
+
 @Injectable({
   providedIn: 'root',
 })
 
-export interface NutriOrder {
-    status: string;
-    patient: string; // ID du patient
-    dateTime: string;
-    orderer: string; // ID du médecin
-    oralDiet: {
-        type: [
-        {
-            coding: [
-            {
-                system: string;
-                code: string;
-                display: string;
-            }
-            ];
-        }
-        ];
-        instruction: string; // L'instruction du formulaire
-    };
-}
 export class NutriorderService {
   constructor(private http: HttpClient) {}
 
@@ -35,12 +40,12 @@ export class NutriorderService {
     );
   }
 
-// Méthode pour créer un NutritionOrder
-createNutritionOrder(nutriOrder: NutriOrder): Observable<any> {
+  // Méthode pour créer un NutritionOrder
+  createNutritionOrder(nutriOrder: NutriOrder): Observable<any> {
     // Effectuez la requête POST pour créer un NutritionOrder
     return this.http.post<any>(
-        'https://fhir.alliance4u.io/api/nutrition-order',
-        nutriOrder
+      'https://fhir.alliance4u.io/api/nutrition-order',
+      nutriOrder
     );
   }
 }
