@@ -12,6 +12,5 @@ export class AppComponent implements OnInit{
   constructor(private observationService : ObservationService){}
 
   ngOnInit(){
-    this.observationService.getObservationById("650014107a32ea001909458f").subscribe((res : any)=>{console.log(res)})
   }
 }
