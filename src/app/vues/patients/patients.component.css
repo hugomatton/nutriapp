@@ -5,6 +5,7 @@
 
 .liste-patients{
     width: 15%;
-    height: 90vh;
+    height: 100%;
+    height: max-content;
     background-color: #f3f3f3;
 }
