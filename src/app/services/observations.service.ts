@@ -12,50 +12,26 @@ export class ObservationService {
   getObservationsByPatientId(patientId:string): Observable<any[]> {
     return this.http.get<any[]>(`https://fhir.alliance4u.io/api/observation?subject.reference=Patient/${patientId}`)
                     .pipe(
-                      map((res)=>{
-                        let mesuresPatient = []
-                        for( let obs of res ){
-                          let poid
-                          let taille
-                          let alreadyIn = false
-                          //si l'observation est une taille
-                          if(res[0].valueQuantity.unit === 'cm'){
-                            taille = res[0].valueQuantity.value
-                            //on cherche le poid correspondant
-                            for( let obs2 of res){
-                              if(obs.effectiveDateTime === obs2.effectiveDateTime){
-                                for(let mesure of mesuresPatient){
-                                  if(mesure.date === obs.effectiveDateTime){
-                                    alreadyIn = true
-                                  }
-                                }
-                                if(!alreadyIn){
-                                  mesuresPatient.push({taille: taille, poid: obs2.valueQuantity.value, date: obs.effectiveDateTime})
-                                }
-                              }
-                            }
-
+                      map((observations)=>{
+                        let poids = []
+                        let tailles = []
+                        let mesures = []
+                        for(let obs of observations){
+                          if(obs.valueQuantity.unit === 'cm'){
+                            tailles.push({date :obs.effectiveDateTime, taille: obs.valueQuantity.value, unit:'cm'})
                           }
-                          //si l'observation est un poids 
-                          if(res[0].valueQuantity.unit === 'kg'){
-                            poid = res[0].valueQuantity.value
-                            //on cherche la taille correspondante
-                            for( let obs2 of res){
-                              if(obs.effectiveDateTime === obs2.effectiveDateTime){
-                                //on regarde si la date n'est pas déjà présente dans le tableau
-                                for(let mesure of mesuresPatient){
-                                  if(mesure.date === obs.effectiveDateTime){
-                                    alreadyIn = true
-                                  }
-                                }
-                                if(!alreadyIn){
-                                  mesuresPatient.push({taille: obs2.valueQuantity.value, poid: poid, date: obs.effectiveDateTime})
-                                }
-                              }
+                          if(obs.valueQuantity.unit === 'kg'){
+                            poids.push({date :obs.effectiveDateTime, poids: obs.valueQuantity.value, unit:'kg'})
+                          }
+                        }
+                        for(let p of poids){
+                          for (let t of tailles){
+                            if(p.date === t.date){
+                              mesures.push({taille: t.taille, poids: p.poids, date: p.date})
                             }
                           }
-                        }                        
-                        return mesuresPatient 
+                        }
+                        return mesures
                       })
                     )
   }
