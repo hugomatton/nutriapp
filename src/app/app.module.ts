@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { ListboxModule } from 'primeng/listbox';
 import { CasePatientComponent } from './vues/patients/case-patient/case-patient.component';
+import { ImcPatientComponent } from './vues/patients/info-patients/imc-patient/imc-patient.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CasePatientComponent } from './vues/patients/case-patient/case-patient.
     HeaderComponent,
     HistoriqueComponent,
     CasePatientComponent,
+    ImcPatientComponent,
   ],
   imports: [
     BrowserModule,
