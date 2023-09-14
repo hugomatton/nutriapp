@@ -1,2 +1,5 @@
 
-<app-case-patient *ngFor="let patient of patients" [patient]="patient" [isActive]="patient.id === activePatientId" (click)="setActivePatient(patient.id)"></app-case-patient>
+<div class="scrollable-list">
+    <app-case-patient *ngFor="let patient of patients" [patient]="patient" [isActive]="patient.id === activePatientId"
+        (click)="setActivePatient(patient.id)"></app-case-patient>
+</div>
