@@ -1,0 +1,16 @@
+.message-accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.bienvenue {
+    font-size: x-large;
+    margin: 2%;
+}
+
+.conseils {
+    font-size: medium;
+}

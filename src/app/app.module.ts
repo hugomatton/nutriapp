@@ -8,6 +8,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
+import { Table, TableModule } from 'primeng/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { CasePatientComponent } from './vues/patients/case-patient/case-patient.
 import { PatientDetailsComponent } from './vues/patients/info-patients/patient-details/patient-details.component';
 import { PlanNutritionnelComponent } from './vues/patients/info-patients/plan-nutritionnel/plan-nutritionnel.component';
 import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph-imc.component';
+import { AccueilComponent } from './vues/accueil/accueil.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph
     PatientDetailsComponent,
     PlanNutritionnelComponent,
     GraphImcComponent,
+    AccueilComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,7 @@ import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph
     FormsModule,
     ButtonModule,
     ChartModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

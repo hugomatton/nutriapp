@@ -1,24 +1,25 @@
 <div class="card">
-    <div class="card-header">
-      Historique des Plans Alimentaires Envoyés
-    </div>
-    <div class="card-body">
-      <table class="table table-striped">
-        <thead>
+    <div class="libelle-historique">HISTORIQUE DES PLANS NUTRITIONNELS ENVOYES</div>
+
+    <div class="card-tab">
+      <p-table [value]="plansWithPatients" styleClass="p-datatable-striped rounded-table"
+        [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
           <tr>
-            <th>Patient</th>
-            <th>Date</th>
-            <th>Instructions Nutritionnelles</th>
+            <th style="background-color: #083b32; color: #fff; border-top-left-radius: 10px;">Patient</th>
+            <th style="background-color: #083b32; color: #fff;">Date</th>
+            <th style="background-color: #083b32; color: #fff; border-top-right-radius: 10px">Instructions Nutritionnelles</th>
           </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let plan of plans; let even = even" [ngClass]="{'bg-light': even, 'bg-white': !even}">
-            <td>{{ plan.patient.display }}</td>
-            <td>{{ plan.dateTime | date:"dd/MM/yyyy"}}</td>
-            <td>{{ plan.oralDiet.instruction }}</td>
+        </ng-template>
+        <ng-template pTemplate="body" let-planNutri>
+          <tr>
+            <td>{{planNutri.patient.name[0].family}} {{planNutri.patient.name[0].given}}</td>
+            <td>{{ planNutri.plan.dateTime | date:"dd/MM/yyyy"}}</td>
+            <td>{{ planNutri.plan.oralDiet.instruction }}</td>
           </tr>
-        </tbody>
-      </table>
+        </ng-template>
+      </p-table>
     </div>
+       
   </div>
   
