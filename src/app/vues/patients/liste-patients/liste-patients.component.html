@@ -1,5 +1,10 @@
 
+<span class="p-input-icon-right">
+    <i class="pi pi-search"></i>
+    <input type="text" class="p-inputtext-lg" [ngModel]="searchValue" (ngModelChange)="onSearchValueChange($event)"/>
+</span>
+
 <div class="scrollable-list">
-    <app-case-patient *ngFor="let patient of patients" [patient]="patient" [isActive]="patient.id === activePatientId"
+    <app-case-patient *ngFor="let patient of patientsToDisplay" [patient]="patient" [isActive]="patient.id === activePatientId"
         (click)="setActivePatient(patient.id)"></app-case-patient>
 </div>

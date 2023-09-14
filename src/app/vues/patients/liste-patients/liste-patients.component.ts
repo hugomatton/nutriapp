@@ -8,9 +8,13 @@ import { PatientService } from 'src/app/services/patients.service';
 })
 export class ListePatientsComponent implements OnInit {
   patients: any[] = [];
+  patientsToDisplay: any[] = []
   listePatientsNoms: any[] = [];
   idPatientSelected!: any;
   activePatientId: number | null = null;
+
+  searchValue: string = ''
+
   @Output() selectPatient = new EventEmitter<any>();
 
   constructor(private patientService: PatientService) {}
@@ -18,13 +22,17 @@ export class ListePatientsComponent implements OnInit {
   ngOnInit(): void {
     this.patientService.getPatients().subscribe((res) => {
       this.patients = res;
-      console.log(res[1]);
-      console.log(res);
+      this.patientsToDisplay = res;
     });
   }
 
   setActivePatient(patientId: number) {
     this.activePatientId = patientId;
-    console.log();
+  }
+
+  onSearchValueChange(event : any){
+    this.patientsToDisplay = this.patients.filter((patient)=>{
+      return patient.name[0].family.toLowerCase().includes(event.toLowerCase())
+    })
   }
 }
