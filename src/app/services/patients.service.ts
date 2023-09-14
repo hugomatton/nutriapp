@@ -13,7 +13,7 @@ export class PatientService {
     return this.http.get<any[]>('https://fhir.alliance4u.io/api/patient');
   }
 
-  getPatientById(idPatient: number): any {
+  getPatientById(idPatient: any): any {
     return this.http.get<any[]>(
       `https://fhir.alliance4u.io/api/patient/${idPatient}`
     );
