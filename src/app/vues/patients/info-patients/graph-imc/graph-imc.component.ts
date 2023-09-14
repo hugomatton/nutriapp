@@ -105,7 +105,7 @@ export class GraphImcComponent implements OnInit {
                 pointRadius: 0,
               },
               {
-                label: 'Obésite de grade 1',
+                label: 'Obésité de grade 1',
                 data: obesite1,
                 fill: true,
                 tension: 0.4,
@@ -114,7 +114,7 @@ export class GraphImcComponent implements OnInit {
                 pointRadius: 0,
               },
               {
-                label: 'Obésite de grade 2',
+                label: 'Obésité de grade 2',
                 data: obesite2,
                 fill: true,
                 tension: 0.4,
@@ -123,12 +123,12 @@ export class GraphImcComponent implements OnInit {
                 pointRadius: 0,
               },
               {
-                label: 'Obésite de grade 3',
+                label: 'Obésité de grade 3',
                 data: obesite3,
                 fill: true,
                 tension: 0.4,
-                borderColor: '#db594d',
-                backgroundColor: '#db594d',
+                borderColor: '#bb4545',
+                backgroundColor: '#bb4545',
                 pointRadius: 0,
               },
             ],
