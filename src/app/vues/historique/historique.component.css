@@ -8,6 +8,19 @@
     background-color: #ffffff; /* Fond blanc */
     padding: 20px; /* Espacement intérieur */
   }
+
+  .card-tab{
+    margin: 20px;
+      /* Marge extérieure pour l'espacement */
+      border: 1px solid #ccc;
+      /* Bordure de la card */
+      border-radius: 15px;
+      /* Coins arrondis */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Ombre légère */
+      background-color: #ffffff;
+      /* Fond blanc */
+  }
   
   /* Appliquer des styles au titre de la card */
   .card-header {
@@ -42,3 +55,15 @@
     border-bottom: 1px solid #ddd; /* Bordure inférieure */
   }
   
+.libelle-historique {
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 0.5em;
+}
+
+.tableBorder {
+  border-radius: 10px;
+  /* Ajustez la valeur selon vos préférences */
+  overflow: hidden;
+  /* Pour cacher les coins extérieurs */
+}

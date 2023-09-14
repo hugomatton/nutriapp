@@ -8,6 +8,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
+import { Table, TableModule } from 'primeng/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,6 +54,7 @@ import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph
     FormsModule,
     ButtonModule,
     ChartModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
