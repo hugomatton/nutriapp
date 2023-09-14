@@ -5,3 +5,12 @@
     overflow-y: auto;
     /* Activer la barre de défilement verticale lorsque nécessaire */
 }
+
+.recherche-patient{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    margin-right: 10px
+}
