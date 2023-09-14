@@ -25,6 +25,7 @@ import { CasePatientComponent } from './vues/patients/case-patient/case-patient.
 import { PatientDetailsComponent } from './vues/patients/info-patients/patient-details/patient-details.component';
 import { PlanNutritionnelComponent } from './vues/patients/info-patients/plan-nutritionnel/plan-nutritionnel.component';
 import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph-imc.component';
+import { AccueilComponent } from './vues/accueil/accueil.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { GraphImcComponent } from './vues/patients/info-patients/graph-imc/graph
     PatientDetailsComponent,
     PlanNutritionnelComponent,
     GraphImcComponent,
+    AccueilComponent,
   ],
   imports: [
     BrowserModule,
