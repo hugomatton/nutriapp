@@ -25,14 +25,16 @@ export class PatientDetailsComponent {
     let idPatient: number;
     //récupérer l'id du facesnap qu'on veut afficher
     this.route.params.subscribe((param: Params) => {
+      this.taille = '-'
+      this.poids = '-'
       idPatient = param['id'];
       this.patientService.getPatientById(idPatient).subscribe((res: any) => {
         this.patient = res;
         this.observationService.getObservationsByPatientId(idPatient.toString())
                                .subscribe((mesures)=>{
                                 console.log('appel du service dans patient detail',mesures)
-                                  this.taille = mesures[0].taille
-                                  this.poids = mesures[0].poids
+                                  this.taille = mesures[mesures.length - 1].taille
+                                  this.poids = mesures[mesures.length - 1].poids
                                   this.imc = this.poids / (this.taille/100 * this.taille/100)
                                })
       });
