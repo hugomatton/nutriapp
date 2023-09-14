@@ -48,4 +48,16 @@ export class NutriorderService {
       nutriOrder
     );
   }
+
+  getNutriOrdersByOrderer(ordererReference: string): Observable<any[]> {
+    return this.http.get<any[]>(
+      `https://fhir.alliance4u.io/api/nutrition-order?orderer.reference=${ordererReference}`
+    );
+  }
+
+  getPatientDataByReference(patientReference: string): Observable<any> {
+    return this.http.get<any>(
+      `https://fhir.alliance4u.io/api/${patientReference}`
+    );
+  }
 }

@@ -1,0 +1,44 @@
+/* Appliquer des styles à la card */
+/* Appliquer des styles à la card */
+.card {
+    margin: 20px; /* Marge extérieure pour l'espacement */
+    border: 1px solid #ccc; /* Bordure de la card */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    background-color: #ffffff; /* Fond blanc */
+    padding: 20px; /* Espacement intérieur */
+  }
+  
+  /* Appliquer des styles au titre de la card */
+  .card-header {
+    font-size: 24px; /* Taille de police en grand */
+    font-weight: bold; /* Texte en gras */
+  }
+  
+  
+  /* Appliquer des styles au tableau */
+  table {
+    width: 100%; /* Tableau à 100% de la largeur de la card */
+    border-collapse: collapse; /* Fusion des bordures des cellules */
+  }
+  
+  /* Appliquer des styles aux en-têtes de colonnes */
+  th {
+    background-color: #f2f2f2; /* Couleur de fond gris clair */
+    font-weight: bold; /* Texte en gras */
+    padding: 10px; /* Espacement intérieur */
+    text-align: left; /* Alignement du texte à gauche */
+    border-bottom: 1px solid #ddd; /* Bordure inférieure */
+  }
+  
+  /* Appliquer des styles aux lignes du tableau */
+  tr:nth-child(even) {
+    background-color: #f5f5f5; /* Couleur de fond gris clair pour les lignes paires */
+  }
+  
+  /* Appliquer des styles aux cellules du tableau */
+  td {
+    padding: 10px; /* Espacement intérieur */
+    border-bottom: 1px solid #ddd; /* Bordure inférieure */
+  }
+  
